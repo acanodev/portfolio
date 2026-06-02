@@ -7,7 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "seed": "node seed.js",
-    "migrate": ""
+    "migrate": "pnpx prisma migrate dev",
+    "migrate:apply": "pnpx prisma migrate deploy",
+    "migrate:reset": "pnpx prisma migrate reset",
+    "generate": "pnpx prisma generate"
   },
   "keywords": [],
   "author": "",
