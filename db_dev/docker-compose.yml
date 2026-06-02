@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:11
+    container_name: portfolio_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"
+    volumes:
+      - portfolio_data:/var/lib/mysql
+    ports:
+      - "${MYSQL_PORT:-3306}:3306"
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.3-apache
+    container_name: portfolio_phpmyadmin
+    restart: always
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+    ports:
+      - "${PHPMYADMIN_PORT:-8080}:80"
+
+volumes:
+  portfolio_data:
