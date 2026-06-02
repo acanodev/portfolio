@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    image: mariadb:12.3.2
+    container_name: portfolio_db
+    environment:
+      - MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE: ${MYSQL_DATABASE}
+    healthcheck:
+      test: ["CMD-SHELL", "mariadb-admin ping -h localhost -u root -p${MYSQL_ROOT_PASSWORD} --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 10  
+    volumes:
+      - portfolio_data:/var/lib/mysql
+  
