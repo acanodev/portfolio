@@ -9,6 +9,7 @@ const adapter = new PrismaMariaDb({
   user: process.env.ADAPTER_USER || "root", // your database username
   password: process.env.ADAPTER_PASSWORD, // your database password
   database: process.env.ADAPTER_DATABASE, // optional, your database name
+  port: process.env.ADAPTER_PORT || 3306
 });
 
 const prisma = new PrismaClient({ adapter });
