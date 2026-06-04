@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const helmet = require("helmet");
+const errorHandler = require('./middlewares/errors/errorHandler');
 require("dotenv").config();
 
 app.use(helmet());
@@ -23,6 +24,7 @@ app.get("/api", (req, res, next) => {
     });
 });
 
+app.use(errorHandler);
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
