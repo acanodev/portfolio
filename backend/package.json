@@ -32,7 +32,8 @@
     "express": "^5.2.1",
     "helmet": "^8.2.0",
     "nodemailer": "^8.0.10",
-    "pg": "^8.21.0"
+    "pg": "^8.21.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/pg": "^8.20.0",
