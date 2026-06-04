@@ -11,16 +11,13 @@ const sendMessage = async (req, res, next) => {
 
     const validate = contactMessageSchema.safeParse(data);
     if (!validate.success) {
-      throw new Error(
-        {
-          ok: false,
-          errors: validate.error.errors.map((e) => ({
-            field: e.path.join("."),
-            message: e.message,
-          })),
-        },
-        400,
-      );
+      return res.status(400).json({
+        ok: false,
+        errors: validate.error.issues.map((e) => ({
+          field: e.path.join("."),
+          message: e.message,
+        })),
+      });
     }
 
     const createMessage = await prisma.contactMessage.create({
