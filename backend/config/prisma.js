@@ -7,8 +7,8 @@ require('dotenv').config({
 const adapter = new PrismaMariaDb({
   host: process.env.ADAPTER_HOST || "localhost", // your database host
   user: process.env.ADAPTER_USER || "root", // your database username
-  password: "your_password", // your database password
-  database: "your_database", // optional, your database name
+  password: process.env.ADAPTER_PASSWORD, // your database password
+  database: process.env.ADAPTER_DATABSE, // optional, your database name
 });
 
 const prisma = new PrismaClient({ adapter });
