@@ -37,7 +37,8 @@ enum CategoryType {
 model Project {
   id            Int      @id @default(autoincrement())
   title         String
-  description   String?  @db.Text
+  description_en   String?  @db.Text
+  description_es   String?  @db.Text
   thumbnail_url String?  @db.Text
   github_url String?
   demo_url   String?
