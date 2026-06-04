@@ -11,7 +11,7 @@ datasource db {
   provider = "mysql"
 }
 
-model Technologies {
+model Technology {
   id         Int      @id @default(autoincrement())
   name       String
   category   CategoryType
@@ -34,7 +34,7 @@ enum CategoryType {
   documentation_and_office
 }
 
-model Projects {
+model Project {
   id            Int      @id @default(autoincrement())
   title         String
   description   String?  @db.Text
@@ -54,8 +54,8 @@ model ProjectTechnology {
   project_id    Int
   technology_id Int
 
-  project     Projects     @relation(fields: [project_id], references: [id])
-  technology  Technologies @relation(fields: [technology_id], references: [id])
+  project     Project     @relation(fields: [project_id], references: [id])
+  technology  Technology @relation(fields: [technology_id], references: [id])
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
