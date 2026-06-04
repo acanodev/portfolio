@@ -4,10 +4,76 @@
 // Get a free hosted Postgres database in seconds: `npx create-db`
 
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "mysql"
+}
+
+model Technology {
+  id         Int      @id @default(autoincrement())
+  name       String
+  category   CategoryType
+  image_url  String?  @db.Text
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  projectTechnology ProjectTechnology[]
+
+  @@map("technologies")
+}
+
+enum CategoryType {
+  frontend
+  backend
+  cms
+  databases
+  devops_and_tools
+  systems
+  documentation_and_office
+}
+
+model Project {
+  id            Int      @id @default(autoincrement())
+  title         String
+  description_en   String?  @db.Text
+  description_es   String?  @db.Text
+  thumbnail_url String?  @db.Text
+  github_url String?
+  demo_url   String?
+  featured   Boolean @default(false) // At this moment it will not be used
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  projectTechnology ProjectTechnology[]
+
+  @@map("projects")
+}
+
+model ProjectTechnology {
+  project_id    Int
+  technology_id Int
+
+  project     Project     @relation(fields: [project_id], references: [id])
+  technology  Technology @relation(fields: [technology_id], references: [id])
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@id([project_id, technology_id])
+  @@map("project_technology")
+}
+
+// Traceability for frontend contact form sent messages.
+model ContactMessage {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String
+  subject    String?
+  message    String   @db.Text
+
+  created_at DateTime @default(now())
+
+  @@map("contact_messages")
 }

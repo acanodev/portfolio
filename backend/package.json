@@ -4,7 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "seed": "node ./seeders/seed.js",
+    "migrate": "pnpx prisma migrate dev",
+    "migrate:apply": "pnpx prisma migrate deploy",
+    "migrate:reset": "pnpx prisma migrate reset",
+    "generate": "pnpx prisma generate"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +22,9 @@
       "onFail": "download"
     }
   },
-  "type": "module",
+  "type": "commonjs",
   "dependencies": {
+    "@prisma/adapter-mariadb": "^7.8.0",
     "@prisma/adapter-pg": "^7.8.0",
     "@prisma/client": "^7.8.0",
     "cors": "^2.8.6",
@@ -25,7 +32,8 @@
     "express": "^5.2.1",
     "helmet": "^8.2.0",
     "nodemailer": "^8.0.10",
-    "pg": "^8.21.0"
+    "pg": "^8.21.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@types/pg": "^8.20.0",
