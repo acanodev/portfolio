@@ -15,6 +15,8 @@ app.use(
 
 app.use(express.json());
 
+const technologiesRoutes = require('./routes/TechnologyRoutes');
+
 const PORT = process.env.API_PORT || 3001;
 
 app.get("/api", (req, res, next) => {
@@ -23,6 +25,8 @@ app.get("/api", (req, res, next) => {
         message: "Hello world!"
     });
 });
+
+app.use("/api/technologies", technologiesRoutes);
 
 app.use(errorHandler);
 app.listen(PORT, () => {
