@@ -26,6 +26,9 @@ importers:
       react-helmet-async:
         specifier: ^3.0.0
         version: 3.0.0(react@19.2.6)
+      react-hook-form:
+        specifier: ^7.77.0
+        version: 7.77.0(react@19.2.6)
       react-router-dom:
         specifier: ^7.16.0
         version: 7.16.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
@@ -929,6 +932,12 @@ packages:
     resolution: {integrity: sha512-nA3IEZfXiclgrz4KLxAhqJqIfFDuvzQwlKwpdmzZIuC1KNSghDEIXmyU0TKtbM+NafnkICcwx8CECFrZ/sL/1w==}
     peerDependencies:
       react: ^16.6.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+
+  react-hook-form@7.77.0:
+    resolution: {integrity: sha512-Sslh9YDYc0GDlWT/lxasnIduNo4v3yyvqRGvmGKUre5AFjDs/HV9/OafHGD8d+sB2yoL4UIL9L8X9i0WlZZebg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
 
   react-router-dom@7.16.0:
     resolution: {integrity: sha512-kMUAbimWB5FVbF4Bce4bJsiKJWLIUHq/mEG8+CFDnCSgltptBiG5nguducmsJeGKytlCvQud9Qhzpn49iduTlA==}
@@ -1917,6 +1926,10 @@ snapshots:
       react: 19.2.6
       react-fast-compare: 3.2.2
       shallowequal: 1.1.0
+
+  react-hook-form@7.77.0(react@19.2.6):
+    dependencies:
+      react: 19.2.6
 
   react-router-dom@7.16.0(react-dom@19.2.6(react@19.2.6))(react@19.2.6):
     dependencies:
