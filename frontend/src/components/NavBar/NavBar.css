@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Broken-Fax';
+    src: url('../../assets/fonts/Rubik_Broken_Fax/RubikBrokenFax-Regular.ttf');
+}
+
+nav {
+    background-color: #111827;
+}
+
+.navbar-brand {
+    font-family: 'Broken-Fax', system-ui, sans-serif;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+nav.navbar {
+    border-radius: 50px;
+}
+
+.navbar-brand h1 {
+    color: #839bcb;
+    font-size: 150%;
+}
+
+.navbar-toggler {
+    border: none !important;
+    color: #839bcb !important;
+}
+
+.navbar-list {
+    color: #839bcb;
+    font-size: larger;
+}
