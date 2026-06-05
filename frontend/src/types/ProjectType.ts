@@ -1,3 +1,5 @@
+import type { ProjectTechnologyType } from "./ProjectTechnologyType"
+
 export type ProjectType = {
     id: number,
     title: string,
@@ -9,4 +11,6 @@ export type ProjectType = {
     featured: boolean,
     created_at: string,
     updated_at: string
+
+    projectTechnology: ProjectTechnologyType
 }
