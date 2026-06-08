@@ -11,11 +11,11 @@ footer {
 }
 
 .footer-link i {
-    font-size: 2em;
+    font-size: 1.6em;
     transition: color .15s ease-in-out, font-size .15s ease-in-out;
 }
 
 .footer-link i:hover {
   color: #6085ce !important;
-  font-size: 2.2em;
+  font-size: 2em;
 }
