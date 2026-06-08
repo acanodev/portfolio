@@ -11,7 +11,7 @@ export default function Home() {
         </title>
       </Helmet>
 
-      <div className="home-hero">
+      <div className="home-hero pb-sm-5 pb-md-0 pb-lg-0">
         <div className="row d-flex gap-5 flex-sm-column flex-md-row flex-lg-row">
         <div className="col text-center">
           <h1 className="text-info display-1 main-title">Aarón Cano</h1>
