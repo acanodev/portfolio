@@ -24,14 +24,14 @@ export default function NavBar() {
           </button>
 
           <div className="navbar-collapse collapse" id="navbar">
-            <ul className="navbar-nav p-2 me-auto mb-2">
+            <ul className="navbar-nav mt-2 p-2 ms-auto mb-2">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <a className="nav-link text-info" aria-current="page" href="#">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link text-info" href="#">
                   Link
                 </a>
               </li>
