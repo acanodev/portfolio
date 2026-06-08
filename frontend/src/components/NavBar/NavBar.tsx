@@ -5,7 +5,7 @@ export default function NavBar() {
   return (
     <div className="p-1 mt-1 position-fixed w-100">
       <nav
-        className="navbar navbar-dark bg-opacity-50 p-2"
+        className="navbar navbar-expand-lg navbar-dark bg-opacity-50 p-2"
       >
         <div className="container-fluid">
           <a className="navbar-brand p-2" href="/">
