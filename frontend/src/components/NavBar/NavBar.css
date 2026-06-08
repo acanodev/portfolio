@@ -27,6 +27,11 @@ nav.navbar {
 .navbar-brand strong {
   color: #839bcb;
   font-size: 110%;
+  transition: color 0.1s ease-in-out;
+}
+
+.navbar-brand strong:hover {
+  color: #6085ce !important;
 }
 
 .navbar-toggler {
