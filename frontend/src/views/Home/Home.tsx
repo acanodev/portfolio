@@ -11,10 +11,11 @@ export default function Home() {
         </title>
       </Helmet>
 
-      <div className="row d-flex gap-5 flex-sm-column flex-md-row flex-lg-row">
-        <div className="col-5 text-center">
+      <div className="home-hero">
+        <div className="row d-flex gap-5 flex-sm-column flex-md-row flex-lg-row">
+        <div className="col text-center">
           <h1 className="text-info display-1 main-title">Aarón Cano</h1>
-          <h2 className="sub-title ms-lg-5 ms-sm-3">
+          <h2 className="sub-title">
             Full Stack Developer Computer Technician
           </h2>
           <p className="text-info mt-4 ms-lg-2">
@@ -40,9 +41,10 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <div className="col-5">
+        <div className="col-sm-12 col-md-5 text-center">
           <div className="placeholder bg-info w-100"></div>
         </div>
+      </div>
       </div>
     </>
   );

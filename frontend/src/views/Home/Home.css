@@ -13,7 +13,6 @@
 }
 
 .sub-title {
-  width: 80%;
   font-family: Google-Sans-Flex, sans-serif;
   color: #839bcb;
 }
@@ -26,6 +25,13 @@ p {
 
 .placeholder {
   height: 200px !important;
+}
+
+.home-hero {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn {
