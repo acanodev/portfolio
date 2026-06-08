@@ -1,43 +1,44 @@
 @font-face {
-    font-family: Changa-One;
-    src: url('../../assets/fonts/Changa_One/ChangaOne-Regular.ttf');
+  font-family: Changa-One;
+  src: url("../../assets/fonts/Changa_One/ChangaOne-Regular.ttf");
 }
 
 @font-face {
-    font-family: Google-Sans-Flex;
-    src: url('../../assets/fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf');
+  font-family: Google-Sans-Flex;
+  src: url("../../assets/fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf");
 }
 
 nav {
-    background-color: #111827;
-    font-family: Google-Sans-Flex, sans-serif;
+  background-color: #111827;
+  font-family: Google-Sans-Flex, sans-serif;
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.2);
 }
 
 .navbar-brand {
-    font-family: Changa-One, system-ui, sans-serif;
-    font-weight: 400px;
-    font-style: normal;
+  font-family: Changa-One, system-ui, sans-serif;
+  font-weight: 400px;
+  font-style: normal;
 }
 
 nav.navbar {
-    border-radius: 50px;
+  border-radius: 20px;
 }
 
 .navbar-brand h1 {
-    color: #839bcb;
-    font-size: 150%;
+  color: #839bcb;
+  font-size: 150%;
 }
 
 .navbar-toggler {
-    border: none !important;
-    color: #839bcb !important;
+  border: none !important;
+  color: #839bcb !important;
 }
 
 .navbar-list {
-    color: #839bcb;
-    font-size: larger;
+  color: #839bcb;
+  font-size: larger;
 }
 
 .nav-link:hover {
-    color: #6085ce !important;
+  color: #6085ce !important;
 }

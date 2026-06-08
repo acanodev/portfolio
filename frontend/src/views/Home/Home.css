@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Changa-One;
+  src: url("../../assets/fonts/Changa_One/ChangaOne-Regular.ttf");
+}
+
+@font-face {
+  font-family: Google-Sans-Flex;
+  src: url("../../assets/fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf");
+}
+
+.main-title {
+  font-family: Changa-One, sans-serif;
+}
+
+.sub-title {
+  width: 80%;
+  font-family: Google-Sans-Flex, sans-serif;
+  color: #839bcb;
+}
+
+p {
+  font-family: Google-Sans-Flex, sans-serif;
+  color: #839bcb;
+  max-width: 500px;
+}
+
+.placeholder {
+  height: 200px !important;
+}
+
+.btn {
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.15);
+  background-color: #0B0F14 !important;
+  color: #839bcb !important;
+  border-color: #839bcb !important;
+}
+
+.btn:hover {
+    background-color: #839bcb !important;
+    color: #0B0F14 !important;
+    box-shadow: 0 0 20px rgba(0, 200, 255, 0.437);
+}

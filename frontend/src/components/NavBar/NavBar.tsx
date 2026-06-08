@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-import './NavBar.css';
+import "./NavBar.css";
 
 export default function NavBar() {
   return (
     <div className="p-1 mt-1 position-fixed w-100">
-      <nav
-        className="navbar navbar-expand-lg navbar-dark bg-opacity-50 p-2"
-      >
+      <nav className="navbar navbar-expand-lg navbar-dark bg-opacity-50 p-2 m-2">
         <div className="container-fluid">
           <a className="navbar-brand p-2" href="/">
-            <h1>Aarón Cano</h1>
+            <h1>
+              <i className="bi bi-code-slash me-2"></i> Aarón Cano
+            </h1>
           </a>
           <button
             className="navbar-toggler collapsed"
