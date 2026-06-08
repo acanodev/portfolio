@@ -24,9 +24,9 @@ nav.navbar {
   border-radius: 20px;
 }
 
-.navbar-brand h1 {
+.navbar-brand strong {
   color: #839bcb;
-  font-size: 150%;
+  font-size: 110%;
 }
 
 .navbar-toggler {

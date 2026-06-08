@@ -7,9 +7,9 @@ export default function NavBar() {
       <nav className="navbar navbar-expand-lg navbar-dark bg-opacity-50 p-2 m-2">
         <div className="container-fluid">
           <a className="navbar-brand p-2" href="/">
-            <h1>
+            <strong>
               <i className="bi bi-code-slash me-2"></i> Aarón Cano
-            </h1>
+            </strong>
           </a>
           <button
             className="navbar-toggler collapsed"

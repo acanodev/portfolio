@@ -11,7 +11,7 @@ export default function Home() {
         </title>
       </Helmet>
 
-      <div className="row d-flex gap-5">
+      <div className="row d-flex gap-5 flex-sm-column flex-md-row flex-lg-row">
         <div className="col-5 text-center">
           <h1 className="text-info display-1 main-title">Aarón Cano</h1>
           <h2 className="sub-title ms-lg-5 ms-sm-3">
@@ -22,14 +22,15 @@ export default function Home() {
             applications.
           </p>
           <div className="d-flex gap-3 justify-content-center">
-            <Link
-              to={"https://github.com/acanodev"}
+            <a
+              href={"https://github.com/acanodev"}
               className="btn btn-primary"
+              target="_blank"
             >
               <span className="pt-1">
                 <i className="bi bi-github me-2"></i> GitHub
               </span>
-            </Link>
+            </a>
 
             <a href={"/cv/AaronCanoFdez_CV-1.pdf"} target="_blank" className="btn btn-primary">
               <span className="pt-1">
