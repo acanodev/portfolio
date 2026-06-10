@@ -14,6 +14,7 @@ function App() {
       <main className="flex-grow-1 container">
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="/home" element={<Home />}></Route>
         </Routes>
       </main>
 

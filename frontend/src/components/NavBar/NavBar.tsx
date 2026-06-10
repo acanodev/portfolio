@@ -6,11 +6,11 @@ export default function NavBar() {
     <div className="p-1 mt-1 position-fixed w-100">
       <nav className="navbar navbar-expand-lg navbar-dark bg-opacity-50 p-2 m-2">
         <div className="container-fluid">
-          <a className="navbar-brand p-2" href="/">
+          <Link className="navbar-brand p-2" to="/">
             <strong>
               <i className="bi bi-code-slash me-2"></i> Aarón Cano
             </strong>
-          </a>
+          </Link>
           <button
             className="navbar-toggler collapsed"
             type="button"
@@ -26,9 +26,9 @@ export default function NavBar() {
           <div className="navbar-collapse collapse" id="navbar">
             <ul className="navbar-nav mt-2 p-2 ms-auto mb-2">
               <li className="nav-item">
-                <a className="nav-link text-info" aria-current="page" href="#">
+                <Link className="nav-link text-info" aria-current="page" to={"/home"}>
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-info" href="#">
