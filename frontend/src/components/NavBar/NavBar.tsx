@@ -31,7 +31,7 @@ export default function NavBar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-info" to="#">
+                <Link className="nav-link text-info" to={"/about"}>
                   <i className="bi bi-person-fill"></i> About
                 </Link>
               </li>
