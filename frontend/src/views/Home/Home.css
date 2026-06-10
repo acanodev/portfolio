@@ -17,13 +17,13 @@
   color: #839bcb;
 }
 
-p {
+.home-p {
   font-family: Google-Sans-Flex, sans-serif;
   color: #839bcb;
   max-width: 500px;
 }
 
-.placeholder {
+.home-placeholder {
   height: 200px !important;
 }
 

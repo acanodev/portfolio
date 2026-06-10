@@ -18,7 +18,7 @@ export default function Home() {
           <h2 className="sub-title">
             Full Stack Developer Computer Technician
           </h2>
-          <p className="text-info mt-4 ms-lg-2">
+          <p className="text-info mt-4 ms-lg-2 home-p">
             Passionate about Linux, web development and building scalable
             applications.
           </p>
@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
         <div className="col-sm-12 col-md-5 text-center">
-          <div className="placeholder bg-info w-100"></div>
+          <div className="placeholder home-placeholder bg-info w-100"></div>
         </div>
       </div>
       </div>
