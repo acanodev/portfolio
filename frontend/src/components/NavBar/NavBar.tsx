@@ -4,7 +4,7 @@ import "./NavBar.css";
 export default function NavBar() {
   return (
     <div className="p-1 mt-1 position-fixed w-100">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-opacity-50 p-2 m-2">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-opacity-50 p-0 m-2">
         <div className="container-fluid">
           <Link className="navbar-brand p-2" to="/">
             <strong>
@@ -27,13 +27,28 @@ export default function NavBar() {
             <ul className="navbar-nav mt-2 p-2 ms-auto mb-2">
               <li className="nav-item">
                 <Link className="nav-link text-info" aria-current="page" to={"/home"}>
-                  Home
+                  <i className="bi bi-house-door-fill"></i> Home
                 </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-info" href="#">
-                  Link
-                </a>
+                <Link className="nav-link text-info" to="#">
+                  <i className="bi bi-person-fill"></i> About
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-info" to={"#"}>
+                  <i className="bi bi-bullseye"></i> Skills
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-info" to={"#"}>
+                  <i className="bi bi-archive-fill"></i> Projects
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link text-info" to={"#"}>
+                  <i className="bi bi-envelope-fill"></i> Contact
+                </Link>
               </li>
             </ul>
           </div>
