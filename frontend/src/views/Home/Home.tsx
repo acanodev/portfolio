@@ -1,30 +1,29 @@
 import { Helmet } from "react-helmet-async";
 import "./Home.css";
-import { Link } from "react-router-dom";
+import { CV_URL, GITHUB_URL, HOME_MY_NAME, HOME_PAGE_TITLE, HOME_SUB_TITLE } from "../../consts/consts";
 
 export default function Home() {
   return (
     <>
       <Helmet>
         <title>
-          Aarón Cano - Computer Technician & Junior Full Stack Developer · Home
+          {HOME_PAGE_TITLE}
         </title>
       </Helmet>
 
       <div className="home-hero pb-sm-5 pb-md-0 pb-lg-0">
         <div className="row d-flex gap-5 flex-sm-column flex-md-row flex-lg-row">
         <div className="col text-center">
-          <h1 className="text-info display-1 main-title">Aarón Cano</h1>
+          <h1 className="text-info display-1 main-title">{HOME_MY_NAME}</h1>
           <h2 className="sub-title">
-            Full Stack Developer Computer Technician
+            {HOME_SUB_TITLE}
           </h2>
           <p className="text-info mt-4 ms-lg-2 home-p">
-            Passionate about Linux, web development and building scalable
-            applications.
+            
           </p>
           <div className="d-flex gap-3 justify-content-center">
             <a
-              href={"https://github.com/acanodev"}
+              href={GITHUB_URL}
               className="btn btn-primary"
               target="_blank"
             >
@@ -33,7 +32,7 @@ export default function Home() {
               </span>
             </a>
 
-            <a href={"/cv/AaronCanoFdez_CV-1.pdf"} target="_blank" className="btn btn-primary">
+            <a href={CV_URL} target="_blank" className="btn btn-primary">
               <span className="pt-1">
                 <i className="bi bi-file-earmark-arrow-down-fill me-2"></i>{" "}
                 Download CV
