@@ -13,7 +13,8 @@ h1 {
 }
 
 .about-container {
-  min-height: calc(100vh - 390px);
+  /* min-height: calc(100vh - 390px); */
+  min-height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,4 +28,8 @@ h1 {
 
 .about-placeholder {
   height: 200px !important;
+}
+
+.random-facts-container {
+  min-height: calc(100vh - 800px);
 }
