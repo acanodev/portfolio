@@ -12,12 +12,12 @@ datasource db {
 }
 
 model Technology {
-  id         Int      @id @default(autoincrement())
+  id         Int          @id @default(autoincrement())
   name       String
   category   CategoryType
-  image_url  String?  @db.Text
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
+  image_url  String?      @db.Text
+  created_at DateTime     @default(now())
+  updated_at DateTime     @updatedAt
 
   projectTechnology ProjectTechnology[]
 
@@ -35,16 +35,16 @@ enum CategoryType {
 }
 
 model Project {
-  id            Int      @id @default(autoincrement())
-  title         String
-  description_en   String?  @db.Text
-  description_es   String?  @db.Text
-  thumbnail_url String?  @db.Text
-  github_url String?
-  demo_url   String?
-  featured   Boolean @default(false) // At this moment it will not be used
-  created_at    DateTime @default(now())
-  updated_at    DateTime @updatedAt
+  id             Int      @id @default(autoincrement())
+  title          String
+  description_en String?  @db.Text
+  description_es String?  @db.Text
+  thumbnail_url  String?  @db.Text
+  github_url     String?
+  demo_url       String?
+  featured       Boolean  @default(false) // At this moment it will not be used
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
 
   projectTechnology ProjectTechnology[]
 
@@ -55,8 +55,8 @@ model ProjectTechnology {
   project_id    Int
   technology_id Int
 
-  project     Project     @relation(fields: [project_id], references: [id])
-  technology  Technology @relation(fields: [technology_id], references: [id])
+  project    Project    @relation(fields: [project_id], references: [id])
+  technology Technology @relation(fields: [technology_id], references: [id])
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
@@ -67,11 +67,11 @@ model ProjectTechnology {
 
 // Traceability for frontend contact form sent messages.
 model ContactMessage {
-  id         Int      @id @default(autoincrement())
-  name       String
-  email      String
-  subject    String?
-  message    String   @db.Text
+  id      Int     @id @default(autoincrement())
+  name    String
+  email   String
+  subject String?
+  message String  @db.Text
 
   created_at DateTime @default(now())
 
@@ -79,8 +79,9 @@ model ContactMessage {
 }
 
 model SoftSkill {
-  id Int  @id @default(autoincrement())
-  name  String
+  id        Int     @id @default(autoincrement())
+  name_en   String
+  name_es   String
   image_url String? @db.Text
 
   created_at DateTime @default(now())
