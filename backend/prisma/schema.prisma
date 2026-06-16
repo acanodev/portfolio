@@ -77,3 +77,14 @@ model ContactMessage {
 
   @@map("contact_messages")
 }
+
+model SoftSkill {
+  id Int  @id @default(autoincrement())
+  name  String
+  image_url String? @db.Text
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("softskills")
+}
