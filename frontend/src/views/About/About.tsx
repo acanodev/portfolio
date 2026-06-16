@@ -1,5 +1,5 @@
 import "./About.css";
-import { ABOUT_ENJOY, ABOUT_LONG_TERM, ABOUT_TEXT } from "../../consts/consts";
+import { ABOUT_ENJOY, ABOUT_HEADER_TITLE, ABOUT_LONG_TERM, ABOUT_PAGE_TITLE, ABOUT_TEXT, FEATURE_IN_DEVELOPMENT, RANDOM_FACTS_TITLE } from "../../consts/consts";
 import { Helmet } from "react-helmet-async";
 
 export default function About() {
@@ -7,12 +7,12 @@ export default function About() {
     <>
       <Helmet>
         <title>
-          Aarón Cano - Computer Technician & Junior Full Stack Developer · About
+          {ABOUT_PAGE_TITLE}
         </title>
       </Helmet>
 
       <header className="pt-5 text-center">
-        <h1 className="text-info display-3">About</h1>
+        <h1 className="text-info display-3">{ABOUT_HEADER_TITLE}</h1>
       </header>
 
       <div className="about-container pb-sm-5 pb-md-5 pb-lg-5">
@@ -33,11 +33,11 @@ export default function About() {
       </div>
 
       <header className="pt-0 text-center">
-        <h1 className="text-info display-3">Random facts</h1>
+        <h1 className="text-info display-3">{RANDOM_FACTS_TITLE}</h1>
       </header>
 
       <div className="about-container random-facts-container pb-sm-5 pb-md-5 pb-lg-5">
-        <h3 className="text-info pt-2">🚧 Feature in development</h3>
+        <h3 className="text-info pt-2">{FEATURE_IN_DEVELOPMENT}</h3>
       </div>
     </>
   );
