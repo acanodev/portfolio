@@ -18,6 +18,7 @@ app.use(express.json());
 const technologiesRoutes = require('./routes/TechnologyRoutes');
 const projectRoutes = require('./routes/ProjectRoutes');
 const contactMessageRoutes = require('./routes/ContactMessageRoutes');
+const softSkillRoutes = require('./routes/SoftSkillRoutes');
 
 const PORT = process.env.API_PORT || 3001;
 
@@ -31,6 +32,7 @@ app.get("/api", (req, res, next) => {
 app.use("/api/technologies", technologiesRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/send-message",contactMessageRoutes);
+app.use("/api/soft-skills");
 
 app.use(errorHandler);
 app.listen(PORT, () => {
