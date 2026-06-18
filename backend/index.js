@@ -32,7 +32,7 @@ app.get("/api", (req, res, next) => {
 app.use("/api/technologies", technologiesRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/send-message",contactMessageRoutes);
-app.use("/api/soft-skills");
+app.use("/api/soft-skills", softSkillRoutes);
 
 app.use(errorHandler);
 app.listen(PORT, () => {
