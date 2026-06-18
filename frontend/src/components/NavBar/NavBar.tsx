@@ -36,8 +36,13 @@ export default function NavBar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-info" to={"#"}>
+                <Link className="nav-link text-info" to={"/skills"}>
                   <i className="bi bi-bullseye"></i> Skills
+                </Link>
+              </li>
+              <li>
+                <Link className="nav-link text-info" to={"#"}>
+                  <i className="bi bi-journal-code"></i> Experience
                 </Link>
               </li>
               <li className="nav-item">
