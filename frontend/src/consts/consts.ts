@@ -30,6 +30,8 @@ export const RANDOM_FACTS_TITLE = "Random facts";
 
 export const SKILLS_PAGE_TITLE = "Aarón Cano - Computer Technician & Junior Full Stack Developer · Skills";
 
+export const SKILLS_HEADER_TITLE = "My Stack";
+
 /*====GENERAL====*/
 
 export const GITHUB_URL = "https://github.com/acanodev";
