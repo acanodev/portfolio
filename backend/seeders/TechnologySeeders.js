@@ -66,7 +66,7 @@ const technologiesData = [
     name: "Express.js",
     category: "backend",
     image_url:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      "https://cdn.simpleicons.org/express/6b7280",
   },
   {
     name: "Node.js",
@@ -124,7 +124,7 @@ const technologiesData = [
     name: "GitHub",
     category: "devops_and_tools",
     image_url:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      "https://cdn.simpleicons.org/github/6b7280",
   },
 
   {
@@ -150,7 +150,7 @@ const technologiesData = [
     name: "Markdown",
     category: "documentation_and_office",
     image_url:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg",
+      "https://cdn.simpleicons.org/markdown/6b7280",
   },
   {
     name: "Word",
