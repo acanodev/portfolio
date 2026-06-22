@@ -1,0 +1,1 @@
+export type SkillsType = "my_stack" | "soft_skills";
