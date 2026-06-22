@@ -4,7 +4,7 @@ const CDN = "https://api.iconify.design/bi";
 
 const softSkillsData = [
   {
-    name_en: "Timeliness and responsability",
+    name_en: "Timeliness and responsibility",
     name_es: "Puntualidad y responsabilidad",
     image_url: `${CDN}/clock.svg?color=%239ca3af`,
   },
@@ -60,7 +60,7 @@ const softSkillsData = [
   },
   {
     name_en: "Critical thinking",
-    name_es: "Pensamiento critico",
+    name_es: "Pensamiento crítico",
     image_url: `${CDN}/search.svg?color=%239ca3af`,
   },
   {
