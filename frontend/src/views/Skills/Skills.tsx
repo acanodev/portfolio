@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import {
   SKILLS_HEADER_TITLE,
+  SKILLS_PAGE_DISPLAY_KEY,
   SKILLS_PAGE_TITLE,
   SOFT_SKILLS_HEADER_TITLE,
 } from "../../consts/consts";
@@ -10,6 +11,7 @@ import { getTechnologies } from "../../services/TechnologyService";
 import "./Skills.css";
 import type { SoftSkillType } from "../../types/SoftSkillType";
 import { getSoftSkills } from "../../services/SoftSkillService";
+import type { SkillsType } from "../../types/SkillsType";
 
 export default function Skills() {
   const [technologies, setTechnologies] = useState<TechnologyType[]>([]);
@@ -18,6 +20,13 @@ export default function Skills() {
   const [loadingSoftSkills, setLoadingSoftSkills] = useState<boolean>(true);
   const [errorTechnologies, setErrorTechnologies] = useState<boolean>(false);
   const [errorSoftSkills, setErrorSoftSkills] = useState<boolean>(false);
+  const [pageDisplay, setPageDisplay] = useState<SkillsType>(() => {
+    return (localStorage.getItem(SKILLS_PAGE_DISPLAY_KEY) as SkillsType) || "my_stack";
+  });
+
+  useEffect(() => {
+    localStorage.setItem(SKILLS_PAGE_DISPLAY_KEY, pageDisplay);
+  }, [pageDisplay]);
 
   useEffect(() => {
     getTechnologies()
@@ -40,6 +49,12 @@ export default function Skills() {
       });
   }, []);
 
+  const switchSkills = (curSkills: SkillsType): void => {
+    const selectedSkills =
+      curSkills !== "soft_skills" ? "soft_skills" : "my_stack";
+    setPageDisplay(selectedSkills);
+  };
+
   return (
     <>
       <Helmet>
@@ -47,12 +62,29 @@ export default function Skills() {
       </Helmet>
 
       <header className="pt-5 text-center">
-        <h1 className="text-info display-3">{SKILLS_HEADER_TITLE}</h1>
+        <h1 className="text-info display-3">{pageDisplay === "my_stack" ? SKILLS_HEADER_TITLE : SOFT_SKILLS_HEADER_TITLE}</h1>
+        <button
+          className="btn btn-primary switch-skills-button"
+          onClick={() => switchSkills(pageDisplay)}
+        >
+          {pageDisplay === "my_stack" && (
+            <>
+              <i className="bi bi-toggle-off me-2"></i>
+              <span>Switch to Soft Skills</span>
+            </>
+          )}
+
+          {pageDisplay === "soft_skills" && (
+            <>
+              <i className="bi bi-toggle-on me-2"></i>{" "}
+              <span>Switch to My Stack</span>
+            </>
+          )}
+        </button>
       </header>
 
       <div className="skills-container pt-5">
-
-        {!loadingTechnologies && !errorTechnologies && (
+        {pageDisplay === "my_stack" && !loadingTechnologies && !errorTechnologies && (
           <div className="row d-flex justify-content-center">
             <h2 className="text-info text-center">Frontend</h2>
 
@@ -184,11 +216,7 @@ export default function Skills() {
           </div>
         )}
 
-        <header className="pt-5 text-center">
-          <h1 className="text-info display-3">{SOFT_SKILLS_HEADER_TITLE}</h1>
-        </header>
-
-        {!loadingSoftSkills && !errorSoftSkills && (
+        {pageDisplay === "soft_skills" && !loadingSoftSkills && !errorSoftSkills && (
           <div className="skills-container pt-5 mb-5">
             <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
               {softSkills.map((s) => (

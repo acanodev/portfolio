@@ -28,6 +28,8 @@ export const RANDOM_FACTS_TITLE = "Random facts";
 
 /*====SKILLS PAGE====*/
 
+export const SKILLS_PAGE_DISPLAY_KEY = "pageDisplay";
+
 export const SKILLS_PAGE_TITLE = "Aarón Cano - Computer Technician & Junior Full Stack Developer · Skills";
 
 export const SKILLS_HEADER_TITLE = "My Stack";
