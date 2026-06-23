@@ -12,6 +12,7 @@ import "./Skills.css";
 import type { SoftSkillType } from "../../types/SoftSkillType";
 import { getSoftSkills } from "../../services/SoftSkillService";
 import type { SkillsType } from "../../types/SkillsType";
+import SkillsList from "../../components/SkillsList/SkillsList";
 
 export default function Skills() {
   const [technologies, setTechnologies] = useState<TechnologyType[]>([]);
@@ -71,7 +72,7 @@ export default function Skills() {
             : SOFT_SKILLS_HEADER_TITLE}
         </h1>
         <button
-          className="btn btn-primary switch-skills-button"
+          className="btn btn-primary switch-skills-button mt-3"
           onClick={() => switchSkills(pageDisplay)}
         >
           {pageDisplay === "my_stack" && (
@@ -104,166 +105,37 @@ export default function Skills() {
                   <div className="carousel-item active">
                     <h2 className="text-info text-center">Frontend</h2>
 
-                    <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
-                      {technologies.map(
-                        (t) =>
-                          t.category === "frontend" && (
-                            <li key={t.id} className="technology-list-item">
-                              <figure>
-                                <img
-                                  src={t.image_url}
-                                  className="technology-image"
-                                />
-                              </figure>
-                              <strong className="text-info text-center">
-                                {t.name}
-                              </strong>
-                            </li>
-                          ),
-                      )}
-                    </ul>
+                    <SkillsList content={technologies.filter((t) => t.category === "frontend")} />
                   </div>
 
                   <div className="carousel-item">
                     <h2 className="text-info text-center mt-5">Backend</h2>
-
-                    <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
-                      {technologies.map(
-                        (t) =>
-                          t.category === "backend" && (
-                            <li key={t.id} className="technology-list-item">
-                              <figure>
-                                <img
-                                  src={t.image_url}
-                                  className="technology-image"
-                                />
-                              </figure>
-                              <strong className="text-info text-center">
-                                {t.name}
-                              </strong>
-                            </li>
-                          ),
-                      )}
-                    </ul>
+                    <SkillsList content={technologies.filter((t) => t.category === "backend")} />
                   </div>
 
                   <div className="carousel-item">
                     <h2 className="text-info text-center mt-5">CMS</h2>
-
-                    <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
-                      {technologies.map(
-                        (t) =>
-                          t.category === "cms" && (
-                            <li key={t.id} className="technology-list-item">
-                              <figure>
-                                <img
-                                  src={t.image_url}
-                                  className="technology-image"
-                                />
-                              </figure>
-                              <strong className="text-info text-center">
-                                {t.name}
-                              </strong>
-                            </li>
-                          ),
-                      )}
-                    </ul>
+                    <SkillsList content={technologies.filter((t) => t.category === "cms")} />
                   </div>
 
                   <div className="carousel-item">
                     <h2 className="text-info text-center mt-5">Databases</h2>
-
-                    <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
-                      {technologies.map(
-                        (t) =>
-                          t.category === "databases" && (
-                            <li key={t.id} className="technology-list-item">
-                              <figure>
-                                <img
-                                  src={t.image_url}
-                                  className="technology-image"
-                                />
-                              </figure>
-                              <strong className="text-info text-center">
-                                {t.name}
-                              </strong>
-                            </li>
-                          ),
-                      )}
-                    </ul>
+                    <SkillsList content={technologies.filter((t) => t.category === "databases")} />
                   </div>
 
                   <div className="carousel-item">
-                    <h2 className="text-info text-center mt-5">
-                      DevOps and Tools
-                    </h2>
-
-                    <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
-                      {technologies.map(
-                        (t) =>
-                          t.category === "devops_and_tools" && (
-                            <li key={t.id} className="technology-list-item">
-                              <figure>
-                                <img
-                                  src={t.image_url}
-                                  className="technology-image"
-                                />
-                              </figure>
-                              <strong className="text-info text-center">
-                                {t.name}
-                              </strong>
-                            </li>
-                          ),
-                      )}
-                    </ul>
+                    <h2 className="text-info text-center mt-5">DevOps and Tools</h2>
+                    <SkillsList content={technologies.filter((t) => t.category === "devops_and_tools")} />
                   </div>
 
                   <div className="carousel-item">
                     <h2 className="text-info text-center mt-5">Systems</h2>
-
-                    <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
-                      {technologies.map(
-                        (t) =>
-                          t.category === "systems" && (
-                            <li key={t.id} className="technology-list-item">
-                              <figure>
-                                <img
-                                  src={t.image_url}
-                                  className="technology-image"
-                                />
-                              </figure>
-                              <strong className="text-info text-center">
-                                {t.name}
-                              </strong>
-                            </li>
-                          ),
-                      )}
-                    </ul>
+                    <SkillsList content={technologies.filter((t) => t.category === "systems")} />
                   </div>
 
                   <div className="carousel-item">
-                    <h2 className="text-info text-center mt-5">
-                      Documentation & Office
-                    </h2>
-
-                    <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
-                      {technologies.map(
-                        (t) =>
-                          t.category === "documentation_and_office" && (
-                            <li key={t.id} className="technology-list-item">
-                              <figure>
-                                <img
-                                  src={t.image_url}
-                                  className="technology-image"
-                                />
-                              </figure>
-                              <strong className="text-info text-center">
-                                {t.name}
-                              </strong>
-                            </li>
-                          ),
-                      )}
-                    </ul>
+                    <h2 className="text-info text-center mt-5">Documentation & Office</h2>
+                    <SkillsList content={technologies.filter((t) => t.category === "documentation_and_office")} />
                   </div>
                 </div>
                 <a
@@ -298,18 +170,7 @@ export default function Skills() {
           !loadingSoftSkills &&
           !errorSoftSkills && (
             <div className="skills-container pt-5 mb-5">
-              <ul className="technology-list d-flex flex-lg-row flex-md-row flex-sm-column flex-wrap justify-content-center gap-5 pt-5">
-                {softSkills.map((s) => (
-                  <li key={s.id} className="soft-skill-list-item">
-                    <figure>
-                      <img src={s.image_url} className="technology-image" />
-                    </figure>
-                    <strong className="text-info text-center">
-                      {s.name_en}
-                    </strong>
-                  </li>
-                ))}
-              </ul>
+              <SkillsList content={softSkills} />
             </div>
           )}
       </div>
