@@ -8,6 +8,10 @@
   src: url("../../assets/fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf");
 }
 
+.navbar-wrapper {
+  z-index: 9999;
+}
+
 nav {
   background-color: #111827;
   font-family: Google-Sans-Flex, sans-serif;

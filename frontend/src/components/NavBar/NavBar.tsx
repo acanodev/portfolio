@@ -3,7 +3,7 @@ import "./NavBar.css";
 
 export default function NavBar() {
   return (
-    <div className="p-1 mt-1 position-fixed w-100">
+    <div className="p-1 mt-1 position-fixed w-100 navbar-wrapper">
       <nav className="navbar navbar-expand-lg navbar-dark bg-opacity-50 p-0 m-2">
         <div className="container-fluid">
           <Link className="navbar-brand p-2" to="/">
