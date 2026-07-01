@@ -1,7 +1,7 @@
 import "./Carousel.css";
 
 type CarouselProps = {
-  children: any;
+  children: React.ReactNode;
   id?: string;
 };
 
