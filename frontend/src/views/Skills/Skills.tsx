@@ -13,6 +13,8 @@ import type { SoftSkillType } from "../../types/SoftSkillType";
 import { getSoftSkills } from "../../services/SoftSkillService";
 import type { SkillsType } from "../../types/SkillsType";
 import SkillsList from "../../components/SkillsList/SkillsList";
+import Carousel from "../../components/Carousel/Carousel";
+import CarouselItem from "../../components/CarouselItem/CarouselItem";
 
 export default function Skills() {
   const [technologies, setTechnologies] = useState<TechnologyType[]>([]);
@@ -95,75 +97,77 @@ export default function Skills() {
         {pageDisplay === "my_stack" &&
           !loadingTechnologies &&
           !errorTechnologies && (
-            <div className="row d-flex justify-content-center">
-              <div
-                className="carousel slide"
-                data-bs-ride="carousel"
-                id="myStackCarousel"
-              >
-                <div className="carousel-inner">
-                  <div className="carousel-item active" data-bs-interval="3000">
+            <>
+              <div className="row d-flex justify-content-center">
+                <Carousel id="myStackCarousel">
+                  <CarouselItem active={true} interval={3000}>
                     <h2 className="text-info text-center">Frontend</h2>
 
-                    <SkillsList content={technologies.filter((t) => t.category === "frontend")} />
-                  </div>
+                    <SkillsList
+                      content={technologies.filter(
+                        (t) => t.category === "frontend",
+                      )}
+                    />
+                  </CarouselItem>
 
-                  <div className="carousel-item" data-bs-interval="3000">
+                  <CarouselItem interval={3000}>
                     <h2 className="text-info text-center mt-5">Backend</h2>
-                    <SkillsList content={technologies.filter((t) => t.category === "backend")} />
-                  </div>
+                    <SkillsList
+                      content={technologies.filter(
+                        (t) => t.category === "backend",
+                      )}
+                    />
+                  </CarouselItem>
 
-                  <div className="carousel-item" data-bs-interval="3000">
+                  <CarouselItem interval={3000}>
                     <h2 className="text-info text-center mt-5">CMS</h2>
-                    <SkillsList content={technologies.filter((t) => t.category === "cms")} />
-                  </div>
+                    <SkillsList
+                      content={technologies.filter((t) => t.category === "cms")}
+                    />
+                  </CarouselItem>
 
-                  <div className="carousel-item" data-bs-interval="3000">
+                  <CarouselItem interval={3000}>
                     <h2 className="text-info text-center mt-5">Databases</h2>
-                    <SkillsList content={technologies.filter((t) => t.category === "databases")} />
-                  </div>
+                    <SkillsList
+                      content={technologies.filter(
+                        (t) => t.category === "databases",
+                      )}
+                    />
+                  </CarouselItem>
 
-                  <div className="carousel-item" data-bs-interval="3000">
-                    <h2 className="text-info text-center mt-5">DevOps and Tools</h2>
-                    <SkillsList content={technologies.filter((t) => t.category === "devops_and_tools")} />
-                  </div>
+                  <CarouselItem interval={3000}>
+                    <h2 className="text-info text-center mt-5">
+                      DevOps and Tools
+                    </h2>
+                    <SkillsList
+                      content={technologies.filter(
+                        (t) => t.category === "devops_and_tools",
+                      )}
+                    />
+                  </CarouselItem>
 
-                  <div className="carousel-item" data-bs-interval="3000">
+                  <CarouselItem interval={3000}>
                     <h2 className="text-info text-center mt-5">Systems</h2>
-                    <SkillsList content={technologies.filter((t) => t.category === "systems")} />
-                  </div>
+                    <SkillsList
+                      content={technologies.filter(
+                        (t) => t.category === "systems",
+                      )}
+                    />
+                  </CarouselItem>
 
-                  <div className="carousel-item" data-bs-interval="3000">
-                    <h2 className="text-info text-center mt-5">Documentation & Office</h2>
-                    <SkillsList content={technologies.filter((t) => t.category === "documentation_and_office")} />
-                  </div>
-                </div>
-                <a
-                  className="carousel-control-prev"
-                  href="#myStackCarousel"
-                  role="button"
-                  data-bs-slide="prev"
-                >
-                  <span
-                    className="bi bi-caret-left-fill text-info display-6"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Previous</span>
-                </a>
-                <a
-                  className="carousel-control-next"
-                  href="#myStackCarousel"
-                  role="button"
-                  data-bs-slide="next"
-                >
-                  <span
-                    className="bi bi-caret-right-fill text-info display-6"
-                    aria-hidden="true"
-                  ></span>
-                  <span className="visually-hidden">Next</span>
-                </a>
+                  <CarouselItem interval={3000}>
+                    <h2 className="text-info text-center mt-5">
+                      Documentation & Office
+                    </h2>
+                    <SkillsList
+                      content={technologies.filter(
+                        (t) => t.category === "documentation_and_office",
+                      )}
+                    />
+                  </CarouselItem>
+                </Carousel>
               </div>
-            </div>
+            </>
           )}
 
         {pageDisplay === "soft_skills" &&
