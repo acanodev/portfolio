@@ -15,3 +15,11 @@ h1 {
 h2 {
   font-family: Google-Sans-Flex, sans-serif;
 }
+
+.carousel-control-prev, .carousel-control-next {
+  transition: all 0.2s ease;
+}
+
+.carousel-control-prev:hover, carousel-control-next:hover {
+  color: #6085ce !important;
+}

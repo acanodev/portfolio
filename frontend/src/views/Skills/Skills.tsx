@@ -102,38 +102,38 @@ export default function Skills() {
                 id="myStackCarousel"
               >
                 <div className="carousel-inner">
-                  <div className="carousel-item active">
+                  <div className="carousel-item active" data-bs-interval="3000">
                     <h2 className="text-info text-center">Frontend</h2>
 
                     <SkillsList content={technologies.filter((t) => t.category === "frontend")} />
                   </div>
 
-                  <div className="carousel-item">
+                  <div className="carousel-item" data-bs-interval="3000">
                     <h2 className="text-info text-center mt-5">Backend</h2>
                     <SkillsList content={technologies.filter((t) => t.category === "backend")} />
                   </div>
 
-                  <div className="carousel-item">
+                  <div className="carousel-item" data-bs-interval="3000">
                     <h2 className="text-info text-center mt-5">CMS</h2>
                     <SkillsList content={technologies.filter((t) => t.category === "cms")} />
                   </div>
 
-                  <div className="carousel-item">
+                  <div className="carousel-item" data-bs-interval="3000">
                     <h2 className="text-info text-center mt-5">Databases</h2>
                     <SkillsList content={technologies.filter((t) => t.category === "databases")} />
                   </div>
 
-                  <div className="carousel-item">
+                  <div className="carousel-item" data-bs-interval="3000">
                     <h2 className="text-info text-center mt-5">DevOps and Tools</h2>
                     <SkillsList content={technologies.filter((t) => t.category === "devops_and_tools")} />
                   </div>
 
-                  <div className="carousel-item">
+                  <div className="carousel-item" data-bs-interval="3000">
                     <h2 className="text-info text-center mt-5">Systems</h2>
                     <SkillsList content={technologies.filter((t) => t.category === "systems")} />
                   </div>
 
-                  <div className="carousel-item">
+                  <div className="carousel-item" data-bs-interval="3000">
                     <h2 className="text-info text-center mt-5">Documentation & Office</h2>
                     <SkillsList content={technologies.filter((t) => t.category === "documentation_and_office")} />
                   </div>
@@ -145,7 +145,7 @@ export default function Skills() {
                   data-bs-slide="prev"
                 >
                   <span
-                    className="carousel-control-prev-icon"
+                    className="bi bi-caret-left-fill text-info display-6"
                     aria-hidden="true"
                   ></span>
                   <span className="visually-hidden">Previous</span>
@@ -157,7 +157,7 @@ export default function Skills() {
                   data-bs-slide="next"
                 >
                   <span
-                    className="carousel-control-next-icon"
+                    className="bi bi-caret-right-fill text-info display-6"
                     aria-hidden="true"
                   ></span>
                   <span className="visually-hidden">Next</span>
