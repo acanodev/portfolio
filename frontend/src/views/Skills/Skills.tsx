@@ -13,6 +13,7 @@ import type { SoftSkillType } from "../../types/SoftSkillType";
 import { getSoftSkills } from "../../services/SoftSkillService";
 import type { SkillsType } from "../../types/SkillsType";
 import SkillsList from "../../components/SkillsList/SkillsList";
+import SkillsMarquee from "../../components/SkillsMarquee/SkillsMarquee";
 import Carousel from "../../components/Carousel/Carousel";
 import CarouselItem from "../../components/CarouselItem/CarouselItem";
 
@@ -173,8 +174,8 @@ export default function Skills() {
         {pageDisplay === "soft_skills" &&
           !loadingSoftSkills &&
           !errorSoftSkills && (
-            <div className="skills-container pt-5 mb-5">
-              <SkillsList content={softSkills} />
+            <div className="pt-5 mb-5">
+              <SkillsMarquee content={softSkills} />
             </div>
           )}
       </div>
