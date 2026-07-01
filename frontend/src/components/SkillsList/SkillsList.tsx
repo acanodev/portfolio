@@ -15,7 +15,7 @@ export default function SkillsList({ content }: SkillsListProps) {
             <figure>
               <img src={c.image_url} className="skill-image" />
             </figure>
-            <strong className="text-info">
+            <strong className="text-info content-text">
                 {"name" in c ? c.name : c.name_en}
             </strong>
           </li>

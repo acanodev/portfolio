@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Google-Sans-Flex;
+  src: url("../../assets/fonts/Google_Sans_Flex/GoogleSansFlex-VariableFont_GRAD\,ROND\,opsz\,slnt\,wdth\,wght.ttf");
+}
+
+
+h2 {
+  font-family: Google-Sans-Flex, sans-serif;
+}
+
 .skills-list {
     list-style-type: none;
 }
@@ -14,4 +24,8 @@
 
 .skills-list-item {
     text-align: center !important;
+}
+
+.content-text {
+  font-family: Google-Sans-Flex, sans-serif;
 }
