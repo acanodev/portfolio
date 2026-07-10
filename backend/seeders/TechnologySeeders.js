@@ -106,8 +106,6 @@ const technologiesData = [
     image_url:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
   },
-  { name: "Eloquent", category: "databases", image_url: null },
-
   {
     name: "Docker",
     category: "devops_and_tools",
