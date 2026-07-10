@@ -18,8 +18,14 @@ h2 {
 }
 
 .skill-image {
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+    transition: transform 0.3s ease;
+}
+
+.skill-image:hover {
+  transform: scale(1.15);
+  margin-bottom: 10px;
 }
 
 .skills-list-item {
