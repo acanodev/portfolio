@@ -20,6 +20,7 @@ model Technology {
   updated_at DateTime     @updatedAt
 
   projectTechnology ProjectTechnology[]
+  experienceTechnology ExperienceTechnology[]
 
   @@map("technologies")
 }
@@ -88,4 +89,31 @@ model SoftSkill {
   updated_at DateTime @updatedAt
 
   @@map("softskills")
+}
+
+model Experience {
+  id Int @id @default(autoincrement())
+  company_name  String
+  description_en String?
+  description_es String?
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  experienceTechnology ExperienceTechnology[]
+
+  @@map("experience")
+}
+
+model ExperienceTechnology {
+  experience_id Int
+  technology_id Int
+
+  experience Experience @relation(fields: [experience_id], references: [id])
+  technology Technology @relation(fields: [technology_id], references: [id])
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@id([experience_id, technology_id])
 }
