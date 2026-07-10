@@ -157,15 +157,7 @@ export default function Skills() {
           </Carousel>
         </div>
 
-        {/* {pageDisplay === "soft_skills" &&
-          !loadingSoftSkills &&
-          !errorSoftSkills && (
-            <div className="pt-5 mb-5">
-              <SkillsMarquee content={softSkills} />
-            </div>
-          )} */}
-
-        <div className={`pt-5 mb-5 ${pageDisplay !== "soft_skills" || loadingSoftSkills || errorSoftSkills ? "d-none" : ""}`}>
+        <div className={`mt-5 pt-5 mb-5 ${pageDisplay !== "soft_skills" || loadingSoftSkills || errorSoftSkills ? "d-none" : ""}`}>
           <SkillsMarquee content={softSkills} />
         </div>
       </div>
