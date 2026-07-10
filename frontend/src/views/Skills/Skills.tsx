@@ -95,89 +95,79 @@ export default function Skills() {
       </header>
 
       <div className="skills-container pt-5">
-        {pageDisplay === "my_stack" &&
-          !loadingTechnologies &&
-          !errorTechnologies && (
-            <>
-              <div className="row d-flex justify-content-center">
-                <Carousel id="myStackCarousel">
-                  <CarouselItem active={true} interval={3000}>
-                    <h2 className="text-info text-center">Frontend</h2>
+        <div
+          className={`row d-flex justify-content-center${pageDisplay !== "my_stack" || loadingTechnologies || errorTechnologies ? " d-none" : ""}`}
+        >
+          <Carousel id="myStackCarousel">
+            <CarouselItem active={true} interval={3000}>
+              <h2 className="text-info text-center">Frontend</h2>
 
-                    <SkillsList
-                      content={technologies.filter(
-                        (t) => t.category === "frontend",
-                      )}
-                    />
-                  </CarouselItem>
+              <SkillsList
+                content={technologies.filter((t) => t.category === "frontend")}
+              />
+            </CarouselItem>
 
-                  <CarouselItem interval={3000}>
-                    <h2 className="text-info text-center mt-5">Backend</h2>
-                    <SkillsList
-                      content={technologies.filter(
-                        (t) => t.category === "backend",
-                      )}
-                    />
-                  </CarouselItem>
+            <CarouselItem interval={3000}>
+              <h2 className="text-info text-center mt-5">Backend</h2>
+              <SkillsList
+                content={technologies.filter((t) => t.category === "backend")}
+              />
+            </CarouselItem>
 
-                  <CarouselItem interval={3000}>
-                    <h2 className="text-info text-center mt-5">CMS</h2>
-                    <SkillsList
-                      content={technologies.filter((t) => t.category === "cms")}
-                    />
-                  </CarouselItem>
+            <CarouselItem interval={3000}>
+              <h2 className="text-info text-center mt-5">CMS</h2>
+              <SkillsList
+                content={technologies.filter((t) => t.category === "cms")}
+              />
+            </CarouselItem>
 
-                  <CarouselItem interval={3000}>
-                    <h2 className="text-info text-center mt-5">Databases</h2>
-                    <SkillsList
-                      content={technologies.filter(
-                        (t) => t.category === "databases",
-                      )}
-                    />
-                  </CarouselItem>
+            <CarouselItem interval={3000}>
+              <h2 className="text-info text-center mt-5">Databases</h2>
+              <SkillsList
+                content={technologies.filter((t) => t.category === "databases")}
+              />
+            </CarouselItem>
 
-                  <CarouselItem interval={3000}>
-                    <h2 className="text-info text-center mt-5">
-                      DevOps and Tools
-                    </h2>
-                    <SkillsList
-                      content={technologies.filter(
-                        (t) => t.category === "devops_and_tools",
-                      )}
-                    />
-                  </CarouselItem>
+            <CarouselItem interval={3000}>
+              <h2 className="text-info text-center mt-5">DevOps and Tools</h2>
+              <SkillsList
+                content={technologies.filter(
+                  (t) => t.category === "devops_and_tools",
+                )}
+              />
+            </CarouselItem>
 
-                  <CarouselItem interval={3000}>
-                    <h2 className="text-info text-center mt-5">Systems</h2>
-                    <SkillsList
-                      content={technologies.filter(
-                        (t) => t.category === "systems",
-                      )}
-                    />
-                  </CarouselItem>
+            <CarouselItem interval={3000}>
+              <h2 className="text-info text-center mt-5">Systems</h2>
+              <SkillsList
+                content={technologies.filter((t) => t.category === "systems")}
+              />
+            </CarouselItem>
 
-                  <CarouselItem interval={3000}>
-                    <h2 className="text-info text-center mt-5">
-                      Documentation & Office
-                    </h2>
-                    <SkillsList
-                      content={technologies.filter(
-                        (t) => t.category === "documentation_and_office",
-                      )}
-                    />
-                  </CarouselItem>
-                </Carousel>
-              </div>
-            </>
-          )}
+            <CarouselItem interval={3000}>
+              <h2 className="text-info text-center mt-5">
+                Documentation & Office
+              </h2>
+              <SkillsList
+                content={technologies.filter(
+                  (t) => t.category === "documentation_and_office",
+                )}
+              />
+            </CarouselItem>
+          </Carousel>
+        </div>
 
-        {pageDisplay === "soft_skills" &&
+        {/* {pageDisplay === "soft_skills" &&
           !loadingSoftSkills &&
           !errorSoftSkills && (
             <div className="pt-5 mb-5">
               <SkillsMarquee content={softSkills} />
             </div>
-          )}
+          )} */}
+
+        <div className={`pt-5 mb-5 ${pageDisplay !== "soft_skills" || loadingSoftSkills || errorSoftSkills ? "d-none" : ""}`}>
+          <SkillsMarquee content={softSkills} />
+        </div>
       </div>
     </>
   );
