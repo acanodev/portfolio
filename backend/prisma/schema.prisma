@@ -46,6 +46,7 @@ model Project {
   featured       Boolean  @default(false) // At this moment it will not be used
   created_at     DateTime @default(now())
   updated_at     DateTime @updatedAt
+  year Int?
 
   projectTechnology ProjectTechnology[]
 
