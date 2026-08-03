@@ -99,7 +99,9 @@ model Experience {
   job_title_es String
   description_en String?
   description_es String?
-  year Int
+  year Int?
+  start_year Int?
+  end_year Int?
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
