@@ -97,8 +97,8 @@ model Experience {
   company_name  String
   job_title_en String
   job_title_es String
-  description_en String?
-  description_es String?
+  description_en String? @db.Text
+  description_es String? @db.Text
   year Int?
   start_year Int?
   end_year Int?
