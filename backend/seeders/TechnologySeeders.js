@@ -168,6 +168,12 @@ const technologiesData = [
     image_url:
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_PowerPoint_%282025%E2%80%93present%29.svg/960px-Microsoft_Office_PowerPoint_%282025%E2%80%93present%29.svg.png",
   },
+  {
+    name: "SharePoint",
+    category: "documentation_and_office",
+    image_url:
+      "https://upload.wikimedia.org/wikipedia/commons/e/ec/Microsoft_Office_SharePoint_%282019%E2%80%932025%29.svg",
+  },
 ];
 
 const seedTechnologies = async () => {
