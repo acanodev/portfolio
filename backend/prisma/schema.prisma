@@ -122,4 +122,5 @@ model ExperienceTechnology {
   updated_at DateTime @updatedAt
 
   @@id([experience_id, technology_id])
+  @@map("experience_technology")
 }
