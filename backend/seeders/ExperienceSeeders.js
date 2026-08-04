@@ -8,7 +8,7 @@ const experienceData = [
     start_year: 2022,
     end_year: 2024,
     type: "education",
-    image_url: "/logo_vallbona.png"
+    image_url: "/logo_vallbona.png",
   },
   {
     place: "Escola Lledoner",
@@ -37,7 +37,7 @@ const experienceData = [
     start_year: 2024,
     end_year: 2026,
     type: "education",
-    image_url: "/logo_vallbona.png"
+    image_url: "/logo_vallbona.png",
   },
   {
     place: "Bujaldon Santiago SL",
@@ -87,7 +87,7 @@ const seedExperience = async () => {
     }
 
     for (const experience of experienceData) {
-      const { technologies, ...experienceFields } = experience;
+      const { technologies = [], ...experienceFields } = experience;
 
       const created = await prisma.experience.create({
         data: experienceFields,
