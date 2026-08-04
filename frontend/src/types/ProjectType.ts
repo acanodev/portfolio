@@ -12,5 +12,5 @@ export type ProjectType = {
     created_at: string,
     updated_at: string
 
-    projectTechnology: ProjectTechnologyType
+    projectTechnology: ProjectTechnologyType[]
 }

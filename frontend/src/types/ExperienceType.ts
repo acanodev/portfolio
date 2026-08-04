@@ -1,5 +1,4 @@
 import type { ExperienceTechnologyType } from "./ExperienceTechnologyType";
-// import type { TechnologyType } from "./TechnologyType";
 
 export type ExperienceType = {
     id: number,
@@ -15,5 +14,5 @@ export type ExperienceType = {
     type: "job" | "education",
     image_url?: number
 
-    experienceTechnology: ExperienceTechnologyType
+    experienceTechnology: ExperienceTechnologyType[]
 }   
