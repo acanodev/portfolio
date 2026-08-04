@@ -36,6 +36,12 @@ export const SKILLS_HEADER_TITLE = "My Stack";
 
 export const SOFT_SKILLS_HEADER_TITLE = "Soft Skills"
 
+/*====EXPERIENCE PAGE====*/
+
+export const EXPERIENCE_PAGE_TITLE = "Aarón Cano - Computer Technician & Junior Full Stack Developer · Experience";
+
+export const EXPERIENCE_HEADER_TITLE = "Experience";
+
 /*====GENERAL====*/
 
 export const GITHUB_URL = "https://github.com/acanodev";
