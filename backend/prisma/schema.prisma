@@ -94,14 +94,17 @@ model SoftSkill {
 
 model Experience {
   id Int @id @default(autoincrement())
-  company_name  String
-  job_title_en String
-  job_title_es String
+  place  String
+  formation_en String?
+  formation_es String?
+  job_title_en String?
+  job_title_es String?
   description_en String? @db.Text
   description_es String? @db.Text
-  year Int?
-  start_year Int?
+  start_year Int
   end_year Int?
+  type ExperienceType
+  image_url String? @db.Text
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
@@ -109,6 +112,11 @@ model Experience {
   experienceTechnology ExperienceTechnology[]
 
   @@map("experience")
+}
+
+enum ExperienceType {
+  job
+  education
 }
 
 model ExperienceTechnology {
