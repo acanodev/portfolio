@@ -12,7 +12,7 @@ export type ExperienceType = {
     start_year: number,
     end_year?: number,
     type: "job" | "education",
-    image_url?: number
+    image_url?: string
 
     experienceTechnology: ExperienceTechnologyType[]
 }   
