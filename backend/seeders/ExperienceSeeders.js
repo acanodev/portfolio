@@ -32,8 +32,8 @@ const experienceData = [
   },
   {
     place: "Institut Carles Vallbona",
-    formation_es: "FPGM Sistemas Microinformáticos y redes (SMR)",
-    formation_en: "Intermediate Degree in Microcomputer Systems and Networks",
+    formation_es: "FPGS Desarrollo de Aplicaciones Web (DAW)",
+    formation_en: "Advanced Degree in Web Application Development",
     start_year: 2024,
     end_year: 2026,
     type: "education",
