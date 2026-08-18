@@ -42,6 +42,10 @@ export const EXPERIENCE_PAGE_TITLE = "Aarón Cano - Computer Technician & Junior
 
 export const EXPERIENCE_HEADER_TITLE = "Experience";
 
+export const EXPERIENCE_EDUCATION_HEADER_TITLE = "Education";
+
+export const EXPERIENCE_JOBS_HEADER_TITLE = "Jobs";
+
 /*====GENERAL====*/
 
 export const GITHUB_URL = "https://github.com/acanodev";
